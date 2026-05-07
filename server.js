@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
@@ -7,7 +9,7 @@ const httpServer = createServer(app)
 
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://localhost:3000", // Ensure this matches your Next.js URL
+        origin: process.env.FRONTEND_URI, // Ensure this matches your Next.js URL
     }
 })
 
