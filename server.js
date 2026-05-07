@@ -10,6 +10,8 @@ const httpServer = createServer(app)
 const io = new Server(httpServer, {
     cors: {
         origin: process.env.FRONTEND_URI, // Ensure this matches your Next.js URL
+        methods: ["GET", "POST"],
+        credentials: true
     }
 })
 
