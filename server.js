@@ -43,7 +43,7 @@ io.on('connect', (socket) => {
     })
 });
 
-app.get('ping',(req,res)=>{
+app.get('/ping',(req,res)=>{
     return res.status(200).send('i am awake');
 })
 
