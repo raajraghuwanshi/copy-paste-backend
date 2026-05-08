@@ -43,6 +43,9 @@ io.on('connect', (socket) => {
     })
 });
 
+app.get('ping',(req,res)=>{
+    return res.status(200).send('i am awake');
+})
 
 
 httpServer.listen(4000, () => {
